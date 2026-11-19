@@ -9,7 +9,7 @@
     "stack": ["Android", "Jeu mobile"],
     "image": null,
     "links": [
-      { "label": "Disponible sur Google Play", "url": "", "kind": "playstore" },
+      { "label": "Disponible sur Google Play", "url": "https://play.google.com/store/apps/details?id=com.kesso.cauridor", "kind": "playstore" },
       { "label": "Dépôt GitHub", "url": "https://github.com/root-225/KESSO", "kind": "github" }
     ]
   },
