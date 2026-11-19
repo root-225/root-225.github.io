@@ -19,6 +19,7 @@ Direction artistique « Rapport d'audit 225 » : le site se lit comme un rapport
 - **Tailwind CSS 4** : tokens de couleur et de typo dans `src/index.css` (`@theme`).
 - **Motion** : révélations au scroll, parallax léger du hero.
 - **Canvas 2D** : grille radar en arrière-plan (~30 fps, désactivée si « mouvement réduit »).
+- **three.js + Blender** : hologramme de 12 000 points qui se transforme au fil du scroll (voir ci-dessous).
 - Polices auto-hébergées (Chakra Petch, IBM Plex Mono), aucun appel externe.
 
 ## Démarrer
@@ -68,6 +69,40 @@ Ajoute un objet dans `src/data/projects.json` :
 ### Réseaux sociaux
 
 Renseigne `url` dans `profile.json > socials`. Une icône sans URL reste visible mais grisée (« lien à venir »).
+
+## Hologramme 3D
+
+Un nuage de 12 000 points suit la lecture de la page et change de forme à chaque section :
+
+| Section | Forme | Sens |
+| --- | --- | --- |
+| Hero | Cauri | artefact ivoirien, l'objet « scanné » |
+| Compétences | Bouclier + serrure | cybersécurité |
+| Projets | Manette | jeux mobiles |
+| Parcours | Double hélice à 8 jalons | les 8 étapes du parcours |
+| Contact | « 225 » en Chakra Petch | signature |
+
+| Bouclier | Hélice |
+| --- | --- |
+| ![Hologramme bouclier](docs/holo-bouclier.png) | ![Hologramme hélice](docs/holo-helice.png) |
+
+Effets (tout dans un seul shader, `src/components/Hologram.jsx`) : assemblage des points à l'arrivée, morphing décalé point par point avec turbulence, plan de scan orange, glitch par tranches (au morphing et en rafales aléatoires), répulsion des points autour du curseur, anneaux de visée, poussière en parallaxe.
+
+- Chargé en différé (chunk séparé) : n'impacte pas le premier affichage.
+- Sans WebGL : seule la grille radar 2D reste. Avec « mouvement réduit » : image fixe, formes changées sans animation.
+- `?holo=0` à `?holo=4` dans l'URL affiche une forme précise (debug).
+
+### Modifier les formes dans Blender
+
+Les formes sont générées par `blender/build_hologram.py` (Blender 4.2+), qui écrit `public/models/hologram.bin`
+et `blender/hologram.blend` (scène « R225_Hologram » avec tous les objets sources). Dans l'onglet Scripting de Blender :
+
+```python
+__file__ = r"D:\portofolio\blender\build_hologram.py"
+exec(compile(open(__file__, encoding="utf-8").read(), __file__, "exec"))
+```
+
+Chaque forme est une fonction `make_*` : modifie-la, relance le script, recharge le site.
 
 ## CV
 

@@ -45,21 +45,37 @@ export function About() {
               {p}
             </p>
           ))}
+          <dl className="grid gap-4 pt-2 text-sm sm:grid-cols-3">
+            {[
+              ["Aujourd'hui", "J'enseigne la cybersécurité chez GOMYCODE et je prépare un Master en cybersécurité."],
+              ['Je construis', 'Des outils en Rust et en Python, des agents IA et des jeux mobiles.'],
+              ['Je protège', "Audit, tests d'intrusion et durcissement des systèmes pour les entreprises."],
+            ].map(([k, v]) => (
+              <div key={k} className="border-t border-line pt-3">
+                <dt className="mb-1 text-xs tracking-widest text-orange uppercase">{k}</dt>
+                <dd className="text-ink/80">{v}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-        <ul className="panel space-y-4 p-6 text-sm">
-          <li>
-            <span className="block text-xs tracking-widest text-muted uppercase">Aujourd'hui</span>
-            J'enseigne la cybersécurité chez GOMYCODE et je prépare un Master en cybersécurité.
-          </li>
-          <li>
-            <span className="block text-xs tracking-widest text-muted uppercase">Je construis</span>
-            Des outils en Rust et en Python, des agents IA et des jeux mobiles.
-          </li>
-          <li>
-            <span className="block text-xs tracking-widest text-muted uppercase">Je protège</span>
-            Audit, tests d'intrusion et durcissement des systèmes pour les entreprises.
-          </li>
-        </ul>
+        <aside aria-label="Fiche d'identité" className="panel h-fit p-5 text-sm">
+          <p className="mb-4 flex items-center justify-between text-xs tracking-widest text-muted uppercase">
+            <span>Fiche cible</span>
+            <span className="text-cyan">ID 225-R01</span>
+          </p>
+          <dl className="space-y-3">
+            {profile.facts.map((f) => (
+              <div key={f.k} className="grid grid-cols-[6.5rem_1fr] gap-2 border-b border-line pb-3 last:border-0">
+                <dt className="text-muted">{f.k}</dt>
+                <dd>{f.v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-4 flex items-center gap-2 text-ok">
+            <span className="pulse-dot inline-block size-2 rounded-full bg-ok" />
+            Ouvert aux missions et collaborations
+          </p>
+        </aside>
       </motion.div>
     </Section>
   )

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Suspense, lazy, useState } from 'react'
 import { MotionConfig } from 'motion/react'
 import profile from './data/profile.json'
 import Radar from './components/Radar.jsx'
@@ -8,6 +8,8 @@ import { About, Contact, Skills, SocialLinks, Timeline } from './components/Sect
 import Icon from './components/Icon.jsx'
 
 const YEAR = new Date().getFullYear()
+// three.js + point clouds load in their own chunk, after first paint.
+const Hologram = lazy(() => import('./components/Hologram.jsx'))
 
 const NAV = [
   ['#resume', 'Résumé'],
@@ -105,6 +107,9 @@ export default function App() {
           Aller au contenu
         </a>
         <Radar />
+        <Suspense fallback={null}>
+          <Hologram />
+        </Suspense>
         <Header />
         <main>
           <Hero />

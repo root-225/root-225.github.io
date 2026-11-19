@@ -82,7 +82,7 @@ export default function Hero() {
 
   return (
     <section ref={ref} id="top" className="relative mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-4 pt-28 pb-16 sm:px-6">
-      <div className="grid items-end gap-10 lg:grid-cols-[1.7fr_1fr]">
+      <div className="max-w-3xl">
         <motion.div style={reduce ? undefined : { y, opacity: fade }}>
           <pre aria-hidden="true" className="mb-8 overflow-hidden text-[11.5px] leading-relaxed whitespace-pre-wrap sm:text-[13px]">
             <span className="text-cyan">root@225</span>
@@ -128,32 +128,21 @@ export default function Hero() {
             </div>
           </motion.div>
         </motion.div>
-
-        <motion.aside
-          aria-label="Fiche d'identité"
-          className="panel p-5 text-sm"
-          initial={reduce ? false : { opacity: 0, x: 20 }}
-          animate={done ? { opacity: 1, x: 0 } : undefined}
-          transition={{ duration: 0.6, delay: 0.7 }}
-        >
-          <p className="mb-4 flex items-center justify-between text-xs tracking-widest text-muted uppercase">
-            <span>Fiche cible</span>
-            <span className="text-cyan">ID 225-R01</span>
-          </p>
-          <dl className="space-y-3">
-            {profile.facts.map((f) => (
-              <div key={f.k} className="grid grid-cols-[6.5rem_1fr] gap-2 border-b border-line pb-3 last:border-0">
-                <dt className="text-muted">{f.k}</dt>
-                <dd>{f.v}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="mt-4 flex items-center gap-2 text-ok">
-            <span className="pulse-dot inline-block size-2 rounded-full bg-ok" />
-            Ouvert aux missions et collaborations
-          </p>
-        </motion.aside>
       </div>
+
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-6 bottom-20 hidden text-right text-[11px] leading-relaxed tracking-widest text-muted uppercase lg:block"
+        initial={reduce ? false : { opacity: 0 }}
+        animate={done ? { opacity: 1 } : undefined}
+        transition={{ duration: 0.6, delay: 0.9 }}
+      >
+        <p>
+          <span className="text-orange">●</span> objet 01 · cauri
+        </p>
+        <p>12 000 points · modélisé sous Blender</p>
+        <p className="text-cyan">survole-le pour le perturber</p>
+      </motion.div>
     </section>
   )
 }
