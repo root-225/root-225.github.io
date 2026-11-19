@@ -1,0 +1,32 @@
+[
+  {
+    "id": "lang",
+    "port": "22",
+    "title": "Langages de programmation",
+    "items": ["Rust", "Python", "JavaScript", "TypeScript", "GDScript", "Bash", "SQL", "HTML / CSS"]
+  },
+  {
+    "id": "frameworks",
+    "port": "443",
+    "title": "Frameworks & bibliothèques",
+    "items": ["React", "Vite", "Tailwind CSS", "Node.js", "Flask", "Tokio", "Godot Engine", "WordPress"]
+  },
+  {
+    "id": "cyber",
+    "port": "31337",
+    "title": "Cybersécurité & outils",
+    "items": ["Tests d'intrusion", "Audit de sécurité", "Hardening Linux / Windows", "OWASP Top 10", "Nmap", "Wireshark", "Burp Suite", "Metasploit", "Kali Linux", "Réseaux Cisco (CCNA)"]
+  },
+  {
+    "id": "ai",
+    "port": "8080",
+    "title": "Intelligence artificielle",
+    "items": ["Agents IA", "LLM & prompt engineering", "Automatisation", "Analyse de données", "pandas", "NumPy", "scikit-learn"]
+  },
+  {
+    "id": "tools",
+    "port": "3000",
+    "title": "Outils de développement",
+    "items": ["Git & GitHub", "VS Code", "Docker", "Linux", "Cargo", "npm", "Postman", "Figma"]
+  }
+]

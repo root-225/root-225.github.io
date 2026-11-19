@@ -1,0 +1,53 @@
+[
+  {
+    "id": "kesso",
+    "ref": "R225-001",
+    "title": "KESSO",
+    "category": "Jeu vidéo",
+    "status": "live",
+    "summary": "Mon premier jeu mobile publié. Disponible gratuitement sur le Google Play Store.",
+    "stack": ["Android", "Jeu mobile"],
+    "image": null,
+    "links": [
+      { "label": "Disponible sur Google Play", "url": "", "kind": "playstore" },
+      { "label": "Dépôt GitHub", "url": "https://github.com/root-225/KESSO", "kind": "github" }
+    ]
+  },
+  {
+    "id": "quiz-ci",
+    "ref": "R225-002",
+    "title": "Quiz Côte d'Ivoire",
+    "category": "Jeu vidéo",
+    "status": "wip",
+    "summary": "Un quiz sur la Côte d'Ivoire : culture, histoire et géographie du pays, pour apprendre en jouant.",
+    "stack": ["Android", "Quiz"],
+    "image": null,
+    "links": [
+      { "label": "Dépôt GitHub", "url": "https://github.com/root-225/quiz-cote-divoire", "kind": "github" }
+    ]
+  },
+  {
+    "id": "lettre-king",
+    "ref": "R225-003",
+    "title": "Lettre King",
+    "category": "Jeu vidéo",
+    "status": "wip",
+    "summary": "Un Petit Bac mobile : une lettre, des catégories, et le plus rapide gagne.",
+    "stack": ["Android", "Jeu de lettres"],
+    "image": null,
+    "links": [
+      { "label": "Politique de confidentialité", "url": "/lettreking/confidentialite.html", "kind": "doc" }
+    ]
+  },
+  {
+    "id": "apps-prod",
+    "ref": "R225-004",
+    "title": "Applications en production",
+    "category": "Application",
+    "status": "prod",
+    "summary": "Des applications déjà utilisées en production. Les détails arrivent bientôt.",
+    "stack": ["Web", "Mobile"],
+    "image": null,
+    "links": []
+  }
+]

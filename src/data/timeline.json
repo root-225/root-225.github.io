@@ -1,0 +1,21 @@
+{
+  "entries": [
+    { "type": "exp", "from": "2026-03", "to": null, "org": "GOMYCODE", "title": "Instructeur en cybersécurité", "detail": "Formation des étudiants en cybersécurité." },
+    { "type": "exp", "from": "2025-11", "to": null, "org": "Informatique Groupe", "title": "Marketing digital & gestion de stock", "detail": "Stratégies marketing pour booster les ventes, gestion du stock." },
+    { "type": "edu", "from": "2025", "to": null, "org": "Université Virtuelle · Cocody Angré", "title": "Master en cybersécurité", "detail": "" },
+    { "type": "exp", "from": "2024", "to": "2025", "org": "SCI Shilo Immo", "title": "Community manager & commercial immobilier", "detail": "Création de visuels, programmation des publications, animation de la communauté, prospection." },
+    { "type": "exp", "from": "2024", "to": "2024", "org": "Store 225", "title": "Maintenancier informatique", "detail": "Maintenance des appareils informatiques." },
+    { "type": "exp", "from": "2024", "to": "2024", "org": "Medyn", "title": "Infographiste, développeur web & community manager", "detail": "Création de visuels, publications, animation de la communauté, développement web." },
+    { "type": "edu", "from": "2021", "to": "2025", "org": "Université Virtuelle · Cocody Angré", "title": "Licence en réseau et sécurité informatique", "detail": "Cybersécurité, programmation, réseaux informatiques." },
+    { "type": "edu", "from": "2019", "to": "2021", "org": "Lycée Moderne Cocody Angré", "title": "Baccalauréat général, série D", "detail": "" }
+  ],
+  "certifications": [
+    "Google Cybersecurity",
+    "Google Data Analytics",
+    "Python for Cybersecurity",
+    "IT Fundamentals for Cybersecurity",
+    "Cisco CCNA (200-301)",
+    "AI Agent Developer",
+    "WordPress Development"
+  ]
+}

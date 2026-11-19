@@ -1,0 +1,26 @@
+{
+  "name": "Karl Joseph Heaven Tiemele",
+  "firstNames": "Karl Joseph Heaven",
+  "lastName": "Tiemele",
+  "alias": "root225r01",
+  "role": "Développeur logiciel & passionné de cybersécurité",
+  "location": "Abidjan, Côte d'Ivoire",
+  "email": "root225r01@gmail.com",
+  "cv": { "pdf": "/cv/CV_Karl_Tiemele.pdf", "web": "/cv/" },
+  "bio": [
+    "Je conçois des solutions technologiques qui explorent Rust, l'intelligence artificielle et la sécurité informatique.",
+    "Mon objectif : construire des outils utiles, sécurisés et accessibles, et aider les entreprises à se protéger."
+  ],
+  "facts": [
+    { "k": "Poste", "v": "Instructeur en cybersécurité · GOMYCODE" },
+    { "k": "Formation", "v": "Master en cybersécurité (en cours)" },
+    { "k": "Certifs", "v": "Cisco CCNA 200-301 · Google Cybersecurity" },
+    { "k": "Langues", "v": "Français · Anglais · Russe · Coréen" }
+  ],
+  "socials": [
+    { "id": "github", "label": "GitHub", "url": "https://github.com/root-225" },
+    { "id": "youtube", "label": "YouTube", "url": "" },
+    { "id": "tiktok", "label": "TikTok", "url": "" },
+    { "id": "x", "label": "X", "url": "" }
+  ]
+}
